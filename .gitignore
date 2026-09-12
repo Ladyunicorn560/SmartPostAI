@@ -1,0 +1,37 @@
+# Environment variables
+.env
+.env.*
+*.env
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Local testing, evaluation, and debug scripts
+test_*.py
+check_*.py
+debug_*.py
+run_evaluations.py
+evaluation_results.json
+apply_fixes.py
+create_buckets.py
+fix_*.sql
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs & temporary files
+*.log
+.temp_check/
