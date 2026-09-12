@@ -83,6 +83,14 @@ scheduler_service = SchedulerService(supabase_client, supabase_admin, ai_service
 # slack_service = SlackService(supabase_client, supabase_admin)
 # slack_bot = SlackBot(slack_service, ai_service, linkedin_service, payment_service, scheduler_service, supabase_admin)
 
+# Ensure asyncio event loop exists for Python 3.11/3.12/3.14 compatibility
+import asyncio
+try:
+    asyncio.get_event_loop()
+except RuntimeError:
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+
 AGENT_NAME = "SmartPostAI"
 agent = Agent(
     name=AGENT_NAME,
