@@ -63,9 +63,7 @@ def register_linkedin_handlers(agent, linkedin_service, ai_service, payment_serv
             
             
             import os
-            frontend_url = os.getenv("FRONTEND_URL", "")
-            if not frontend_url:
-                raise ValueError("FRONTEND_URL environment variable is required")
+            frontend_url = os.getenv("FRONTEND_URL") or "https://smart-post-ai-frontend.vercel.app"
             
             base_redirect = f"{frontend_url}/dashboard"
             redirect_url = base_redirect

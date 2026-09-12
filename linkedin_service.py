@@ -8,7 +8,7 @@ load_dotenv()
 
 LINKEDIN_CLIENT_ID = os.getenv("LINKEDIN_CLIENT_ID", "")
 LINKEDIN_CLIENT_SECRET = os.getenv("LINKEDIN_CLIENT_SECRET", "")
-LINKEDIN_REDIRECT_URI = os.getenv("LINKEDIN_REDIRECT_URI", "")
+LINKEDIN_REDIRECT_URI = os.getenv("LINKEDIN_REDIRECT_URI", "https://smartpost-backend.onrender.com/linkedin/callback")
 LINKEDIN_SCOPE = os.getenv("LINKEDIN_SCOPE", "openid profile email w_member_social")
 
 class LinkedInService:
